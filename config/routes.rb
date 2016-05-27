@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :podcasts
   root 'welcome#index'
+  resources :podcasts, only: [:index,:show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
