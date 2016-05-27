@@ -16,7 +16,7 @@ body{
   margin: 0 auto;
 }
 
-.wrapper_skiny{
+.wrapper_skinny{
   width: 50%;
   margin: 0 auto;
 }
@@ -116,7 +116,7 @@ body{
    background-image: url(); 
 }
 .sign_up_banner {
-   background-image: url(); 
+   background-image: image-url('headphones.jpg'); 
 }
 
 .pagination:before, .pagination:after{
@@ -184,4 +184,4 @@ textarea{
 
 @import 'normalize';
 @import 'welcome';
-// @import 'podcasts';
+@import 'podcasts';

@@ -12,7 +12,26 @@
   <% elsif notice %>
     <p class="notice"><%= notice %></p>
   <% end %>
+    <header class='clearfix' id="main_header">
+    <div class="wrapper_wide">
+      <%= link_to 'Upodcast.me', root_path, id: 'logo'%>
+      <nav>
+        <ul>
+          <% unless podcast_signed_in? %>
+          <li><a href="#">Explore</a></li>
+          <li><%= link_to 'Sign In', new_podcast_session_path %></li>
+          <li><a href="#">Create a Podcast</a></li>
+          <% else %>
+          <li><a href="#">Explore</a></li>
+          <li><%= link_to 'Sign Out', destroy_podcast_session_path, method: :delete %></li>
+          <li><a href="#">Create a Podcast</a></li>
+        <% end %>
+        </ul>
+      </nav>
+    </div>
+    </header>
 <%= yield %>
+
 
 </body>
 </html>
