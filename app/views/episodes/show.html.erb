@@ -17,13 +17,21 @@
       <div id="breadcrumb">
       <%= link_to podcasts_path do %>
         All Podcasts
+      <span>/</span><%= link_to @podcast.title, podcast_path(@podcast) %>
       <% end %>
-      <span>/</span><%= @podcast.title %>
+      <span>/</span><%= @episode.title %>
+      </div>
+      <div id="episode_content">
+        <div class="wrapper_skinny">
+          <img src="images/pieter_levels.png" alt="Pieter" class='current_episode_thumbnail'>
+          <h2><%= @episode.title %></h2>
+          <p class="description"><%= @episode.description %></p>
+        </div>
       </div>
       <div id="episodes">
         <div class="wrapper_skinny">
           <ul class="clearfix">
-            <% @episodes.each do |episode| %>
+          <% @episodes.each do |episode| %>
             <li class="clearfix">
               <div class="episode_thumbnail">
                 <a href="#">
@@ -32,7 +40,7 @@
               </div>
               <div class="episode_overview">
                 <h2><%= link_to episode.title, podcast_episode_path(@podcast, episode) %></h2>
-                  <p class="description"><%= truncate(episode.description, length: 150) %></p>
+                  <p class="description"><%= episode.description %></p>
               </div>
             </li>
             <% end %>
