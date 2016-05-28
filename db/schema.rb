@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20160527195524) do
     t.string   "title"
     t.text     "description"
     t.string   "itunes"
-    t.string   "sticher"
+    t.string   "stitcher"
     t.string   "podbay"
   end
 

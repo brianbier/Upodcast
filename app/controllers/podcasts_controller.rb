@@ -11,7 +11,7 @@ class PodcastsController < ApplicationController
   private
 
 def podcast_params
-  params.require(:podcast).permit(:title,:description,:itunes,:sticher,:podbay,:email)
+  params.require(:podcast).permit(:title,:description,:itunes,:stitcher,:podbay,:email)
 end
 
 def find_podcast

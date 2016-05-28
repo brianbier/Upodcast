@@ -6,8 +6,8 @@
         <% unless @podcast.itunes.blank? %>
           <%= link_to 'iTunes', @podcast.itunes, class: 'subscribe_link' %>
         <% end %>
-        <% unless @podcast.sticher.blank? %>
-          <%= link_to 'Stitcher', @podcast.sticher, class: 'subscribe_link' %>
+        <% unless @podcast.stitcher.blank? %>
+          <%= link_to 'Stitcher', @podcast.stitcher, class: 'subscribe_link' %>
         <% end %>
         <% unless @podcast.podbay.blank? %>
           <%= link_to 'Podbay', @podcast.podbay, class: 'subscribe_link' %>
@@ -30,9 +30,8 @@
                 </a>
               </div>
               <div class="episode_overview">
-                <h2><a href="#">Title of the podcast Yes I got this</a></h2>
-                  <p class="description">Hello bla bla hkdsjf;lasdhfjkadsjfioa[dsfia[jhfdiosfjiaods'jfoi[ajsdiofjheipurhqfu-4h3quf-[g349yfgh[hqu9ehfaubv aruib airugiu shfuasho[fhasd[fjasdhfohasd[ofhodis[ajf
-                  </p>
+                <h2><%= link_to "#{@podcast.title}" %></h2>
+                  <p class="description"><%= @podcast.description %></p>
               </div>
             </li>
           </ul>
