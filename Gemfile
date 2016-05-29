@@ -26,6 +26,7 @@ gem 'rails_12factor'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'pry-rails'
 gem 'devise'
+gem 'paperclip'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
