@@ -27,6 +27,9 @@ gem 'rails_12factor'
 gem 'pry-rails'
 gem 'devise'
 gem 'paperclip'
+
+#AMAZON WEB SERVICES
+gem 'aws-sdk', '~> 2.3'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
