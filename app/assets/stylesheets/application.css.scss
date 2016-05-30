@@ -7,6 +7,16 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
+::-moz-selection{
+  background-color:$highlight;
+  color: $white;
+}
+
+::selection{
+  background-color:$highlight;
+  color: $white;
+}
+
 h1,h2,h3,h4,h5,h6,p,ul,li{
   color:$dark;
 }
@@ -110,6 +120,26 @@ p, ul, ol{
   display: block;
 
 }
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Choose File';
+  display: inline-block;
+  color: $white;
+  background-color: $highlight;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: $dark;
+}
+
 .menu{
   display: none;
 }
@@ -222,6 +252,11 @@ input[type="email"], input[type="text"], input[type="password"],textarea {
   border: 1px solid darken($light, 5%);
   border-radius: 0.35rem;
   margin-top: .5rem;
+  &:focus{
+  border: 2px solid $highlight;
+  box-shadow: 0 0;
+  outline: 0;
+  }
 }
 
 textarea{
@@ -242,11 +277,27 @@ textarea{
 //--- Ipad Screen Size ---//
 @media only screen and (max-width: 788px){
 
+#banner{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 4rem;
+  h1{
+    text-align: center;
+    color: $white;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 8rem 0;
+  }
+}
 
 }
 
 //--- Mobile Screen Size ---//
 @media only screen and (max-width: 488px){
+
   #main_nav {
       display: none;  
   }
@@ -274,4 +325,40 @@ textarea{
       }
     }
   }
+
+#banner{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 4rem;
+  h1{
+    text-align: center;
+    color: $white;
+    font-size: 1.7rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 8rem 0;
+  }
+}
+input[type="email"], input[type="text"], input[type="password"],textarea {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.25rem 0.25rem;
+  background: $light;
+  border: 1px solid darken($light, 5%);
+  border-radius: 0.35rem;
+  margin-top: .5rem;
+}
+
+textarea{
+  min-height: 8rem;
+  margin-top: 0.5rem !important;
+
+}
+
+#form{
+  padding: 0 0 5rem 0;
+}
+
 }
