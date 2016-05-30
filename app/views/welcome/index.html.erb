@@ -2,7 +2,8 @@
   <header class='clearfix'>
     <div class="wrapper_wide">
       <%= link_to 'Upodcast.me', root_path, id: 'logo'%>
-      <nav>
+      <button class="menu"><i class="fa fa-bars"></i></button>
+      <nav id="main_nav">
         <ul>
           <li><%= link_to 'Explore', podcasts_path %></li>
           <li><%= link_to 'Sign In', new_podcast_session_path %></li>
@@ -11,7 +12,7 @@
       </nav>
     </div>
   </header>
-  <div class="wrapper_skinny">
+  <div class="wrapper_skinny slogan">
     <h1>Discover your next favorite <br>podcast, or simple create your own.</h1>
     <%= link_to 'Create a podcast', new_podcast_registration_path, class: 'button button_highlight' %>
     <%= link_to 'Explore', podcasts_path, class: 'button button_white'%>
