@@ -17,9 +17,11 @@
       <p class="notice"><%= notice %></p>
     </div>
   <% end %>
+
   <% unless current_page?(root_path) %>
     <%= render 'layouts/header'; %>
   <% end %>
+
 <%= yield %>
 
 <script>
@@ -28,7 +30,7 @@
       $('#notice_wrapper').fadeOut('slow',function(){
         $this.remove();
       });
-    },3000);
+    },2000);
   });
 </script>
 

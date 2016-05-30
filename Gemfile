@@ -29,7 +29,7 @@ gem 'devise'
 gem 'paperclip'
 gem "font-awesome-rails"
 #AMAZON WEB SERVICES
-gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk', '< 2.0'
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'will_paginate'
