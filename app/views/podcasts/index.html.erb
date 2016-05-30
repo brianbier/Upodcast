@@ -6,7 +6,7 @@
   <div class="wrapper">
     <% @podcasts.each do |podcast| %>
     <%= link_to podcast do %>
-    <ul>
+    <ul class="clearfix">
         <li>
         <%= image_tag podcast.thumbnail.url(:medium) %>
           <div class="podcast_overview">
@@ -17,5 +17,6 @@
     <% end %>
     <% end %>
     </ul>
+    <%= will_paginate @podcasts %>
   </div>
 </div>
