@@ -41,7 +41,7 @@ end
 private
 
 def episode_params
-  params.require(:episode).permit(:title,:description,:episode_thumbnail)
+  params.require(:episode).permit(:title,:description,:episode_thumbnail, :mp3)
 end
 
 def find_podcast
@@ -54,7 +54,7 @@ end
 
 #TO prevent users from going into other user
 def  require_permission
-  if current_podcast != Podcast.find(params[:podcast_id]) || Podcast.find(params[:podcast_id]) == nil 
+  if current_podcast != Podcast.find(params[:podcast_id])
     redirect_to root_path, notice: "Sorry You are not allowed to view that page"
   end
 end
