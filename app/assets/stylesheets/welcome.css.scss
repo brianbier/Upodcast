@@ -29,7 +29,9 @@
             color: $white;
             text-decoration: none;
             //clear fix will make sure things dont get pushed up
-
+            &:hover{
+              color: $highlight;
+            }
           }
         }
       }
@@ -133,7 +135,6 @@
             color: $white;
             text-decoration: none;
             //clear fix will make sure things dont get pushed up
-
           }
         }
       }

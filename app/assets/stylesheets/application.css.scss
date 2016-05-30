@@ -136,7 +136,9 @@ p, ul, ol{
             color: $dark;
             text-decoration: none;
 //clear fix will make sure things dont get pushed up
-
+            &:hover{
+              color: $highlight;
+            }
           }
         }
       }   
@@ -256,7 +258,7 @@ textarea{
     outline: none;
     i{
       font-size: 1.6em;
-      color: $white;
+      color: $highlight;
 
     }
   }
